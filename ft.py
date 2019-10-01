@@ -10,7 +10,6 @@ sys = control.tf(num, den)
 T, yout = control.step_response(sys)
 
 fig, ax = plt.subplots()
-ax.plot(T, yout)
 
 ax.set(xlabel='X (x)', ylabel='Y (y)', title='Entrada degrau')
 
