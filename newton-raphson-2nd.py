@@ -27,22 +27,21 @@ def mnewton(theta):
   L = R[3]
 
   f = np.matrix([
-    [P*math.cos(t3b)-Q*math.cos(t4b)+S*math.cos(t2)-L],
-    [P*math.sin(t3b)-Q*math.sin(t4b)+S*math.sin(t2)]  
+    [ P*math.cos(t3b) - Q*math.cos(t4b) + S*math.cos(t2) - L ],
+    [ P*math.sin(t3b) - Q*math.sin(t4b) + S*math.sin(t2) ]  
   ])
 
   while norm(f) > eps:
     J = np.matrix([
-      [-P*math.sin(t3b), Q*math.cos(t4b)],
-      [P*math.cos(t3b), -Q*math.cos(t4b)]
+      [ -P*math.sin(t3b) , Q*math.cos(t4b) ],
+      [ P*math.cos(t3b) , -Q*math.cos(t4b) ]
     ])
     MulM = (-1) * np.linalg.inv(J) * f
     t3b = (t3b + MulM[0])
     t4b = (t4b + MulM[1])
-    print(t3b, t4b)
     f = np.matrix([
-      [P*math.cos(t3b)-Q*math.cos(t4b)+S*math.cos(t2)-L],
-      [P*math.sin(t3b)-Q*math.sin(t4b)+S*math.sin(t2)]  
+      [ P*math.cos(t3b) - Q*math.cos(t4b) + S*math.cos(t2) - L ],
+      [ P*math.sin(t3b) - Q*math.sin(t4b) + S*math.sin(t2) ]  
     ])
   
   return math.degrees(t3b) % 360, math.degrees(t4b) % 360
