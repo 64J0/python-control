@@ -2,8 +2,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import math
 
-R = [10, 13, 15, 17] # Elos estáticos
-theta = [0, 30, 38, 77] # 27 e 100 sao os valores de chute para a primeira iteracao
+R = [3, 8, 6, 10] # Elos estáticos
+theta = [0, 60, 27, 100] # 27 e 100 sao os valores de chute para a primeira iteracao
 
 def norm(f):
   return math.sqrt(math.pow(f[0], 2) + math.pow(f[1], 2))
